@@ -1,0 +1,24 @@
+# Python 虚拟环境
+venv/
+__pycache__/
+*.pyc
+
+# 模型文件（如果太大，不提交到GitHub）
+*.onnx
+*.pt
+*.pth
+
+# 环境变量
+.env
+
+# IDE 配置
+.vscode/
+.idea/
+
+# 数据库文件（可选，看你们是否想把数据提交）
+*.db
+*.sqlite
+
+# 系统文件
+.DS_Store
+Thumbs.db

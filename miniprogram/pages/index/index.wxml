@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="page">
+  <!-- 顶部标题栏 -->
+  <view class="header">
+    <text class="header-title">垃圾分类助手</text>
+  </view>
+
+  <!-- 图片预览区域 -->
+  <view class="preview-area">
+    <image wx:if="{{hasImage}}" class="preview-image" src="{{imagePath}}" mode="aspectFit"></image>
+    <text wx:else class="preview-placeholder">请点击下方按钮选择图片</text>
+  </view>
+
+  <!-- 识别结果区域 -->
+  <view wx:if="{{hasImage}}" class="result-area">
+    <text class="result-text">{{result || '等待识别...'}}</text>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="button-group">
+    <button class="btn btn-camera" bindtap="takePhoto">
+      <text>📷 拍照识别</text>
+    </button>
+    <button class="btn btn-album" bindtap="chooseFromAlbum">
+      <text>🖼 从相册选择</text>
+    </button>
+  </view>
+</view>
