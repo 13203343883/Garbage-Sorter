@@ -1,0 +1,111 @@
+/**result.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* 顶部标题栏 */
+.header {
+  width: 100%;
+  padding: 24rpx 0;
+  background-color: #07C160;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 36rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+
+/* 识别图片 */
+.image-area {
+  display: flex;
+  justify-content: center;
+  margin: 40rpx 0 32rpx;
+  flex-shrink: 0;
+}
+
+.result-image {
+  width: 80%;
+  max-height: 600rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* 识别结果信息卡片 */
+.info-card {
+  margin: 0 48rpx;
+  padding: 32rpx;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18rpx 0;
+}
+
+.info-row + .info-row {
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.info-label {
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #888888;
+  flex-shrink: 0;
+}
+
+.info-value {
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+/* 类别标签颜色区分 */
+.category-tag {
+  color: #07C160;
+  font-weight: 600;
+}
+
+/* 底部按钮区域 */
+.button-area {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: calc(48rpx + env(safe-area-inset-bottom));
+}
+
+.btn-again {
+  width: 60%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color: #07C160;
+  color: #ffffff;
+  font-size: 30rpx;
+  font-weight: 500;
+  border-radius: 44rpx;
+  border: none;
+  padding: 0;
+}
+
+.btn-again::after {
+  border: none;
+}
