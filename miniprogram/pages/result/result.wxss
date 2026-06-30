@@ -16,7 +16,7 @@ page {
 .header {
   width: 100%;
   padding: 24rpx 0;
-  background-color: #07C160;
+  background-
   text-align: center;
   flex-shrink: 0;
 }
@@ -78,8 +78,8 @@ page {
 }
 
 /* 类别标签颜色区分 */
-.category-tag {
-  color: #07C160;
+.category-tag { display: inline; padding: 4rpx 16rpx; border-radius: 8rpx; font-size: 26rpx;
+  
   font-weight: 600;
 }
 
@@ -97,7 +97,7 @@ page {
   height: 88rpx;
   line-height: 88rpx;
   text-align: center;
-  background-color: #07C160;
+  background-
   color: #ffffff;
   font-size: 30rpx;
   font-weight: 500;
@@ -109,3 +109,20 @@ page {
 .btn-again::after {
   border: none;
 }
+.image-empty { height: 400rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-hint {
+  color: #cccccc;
+  font-size: 28rpx;
+}
+.category-recyclable { background-color: rgba(7, 193, 96, 0.12); color: #07C160; }
+.category-hazardous { background-color: rgba(231, 76, 60, 0.12); color: #E74C3C; }
+.category-kitchen { background-color: rgba(243, 156, 18, 0.12); color: #F39C12; }
+.category-other { background-color: rgba(149, 165, 166, 0.15); color: #7F8C8D; }
+.demo-banner { margin: 0 48rpx 16rpx; padding: 16rpx; background-color: #FFF3CD; border-radius: 8rpx; text-align: center; }
+.demo-banner text { font-size: 24rpx; color: #856404; }

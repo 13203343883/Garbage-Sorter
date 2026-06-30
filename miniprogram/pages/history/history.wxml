@@ -1,0 +1,30 @@
+<!--history.wxml-->
+<view class="page">
+  <view class="header">
+    <text class="header-title">识别历史</text>
+  </view>
+
+  <view wx:if="{{historyList.length === 0}}" class="empty-tip">
+    <view class="empty-icon"></view>
+    <text class="empty-text">暂无识别记录</text>
+  </view>
+
+  <scroll-view wx:else class="history-list" scroll-y>
+    <view 
+      wx:for="{{historyList}}" 
+      wx:key="id" 
+      class="history-item"
+      hover-class="history-item-active"
+      data-id="{{item.id}}"
+      data-image-path="{{item.imagePath}}"
+      data-name="{{item.garbageName}}"
+      data-category="{{item.category}}"
+      data-confidence="{{item.confidence}}"
+      bindtap="onItemTap"
+    >
+      <text class="item-name">{{item.garbageName}}</text>
+      <text class="item-category category-{{item.categoryClass}}">{{item.categoryName || item.category}}</text>
+      <text class="item-time">{{item.time}}</text>
+    </view>
+  </scroll-view>
+</view>
