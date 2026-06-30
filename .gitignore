@@ -8,6 +8,7 @@ __pycache__/
 *.pt
 *.pth
 
+Test_Images/
 # 环境变量
 .env
 
