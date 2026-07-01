@@ -12,11 +12,10 @@ page {
   height: 100vh;
 }
 
-/* 顶部标题栏 */
 .header {
   width: 100%;
   padding: 24rpx 0;
-  background-
+  background-color: #07C160;
   text-align: center;
   flex-shrink: 0;
 }
@@ -28,7 +27,6 @@ page {
   letter-spacing: 2rpx;
 }
 
-/* 识别图片 */
 .image-area {
   display: flex;
   justify-content: center;
@@ -44,7 +42,6 @@ page {
   background-color: #ffffff;
 }
 
-/* 识别结果信息卡片 */
 .info-card {
   margin: 0 48rpx;
   padding: 32rpx;
@@ -77,13 +74,13 @@ page {
   font-weight: 500;
 }
 
-/* 类别标签颜色区分 */
-.category-tag { display: inline; padding: 4rpx 16rpx; border-radius: 8rpx; font-size: 26rpx;
-  
+.category-tag {
+  padding: 4rpx 16rpx;
+  border-radius: 8rpx;
+  font-size: 26rpx;
   font-weight: 600;
 }
 
-/* 底部按钮区域 */
 .button-area {
   flex: 1;
   display: flex;
@@ -97,7 +94,7 @@ page {
   height: 88rpx;
   line-height: 88rpx;
   text-align: center;
-  background-
+  background-color: #07C160;
   color: #ffffff;
   font-size: 30rpx;
   font-weight: 500;
@@ -109,7 +106,9 @@ page {
 .btn-again::after {
   border: none;
 }
-.image-empty { height: 400rpx;
+
+.image-empty {
+  height: 400rpx;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -120,9 +119,21 @@ page {
   color: #cccccc;
   font-size: 28rpx;
 }
+
 .category-recyclable { background-color: rgba(7, 193, 96, 0.12); color: #07C160; }
 .category-hazardous { background-color: rgba(231, 76, 60, 0.12); color: #E74C3C; }
 .category-kitchen { background-color: rgba(243, 156, 18, 0.12); color: #F39C12; }
 .category-other { background-color: rgba(149, 165, 166, 0.15); color: #7F8C8D; }
-.demo-banner { margin: 0 48rpx 16rpx; padding: 16rpx; background-color: #FFF3CD; border-radius: 8rpx; text-align: center; }
-.demo-banner text { font-size: 24rpx; color: #856404; }
+
+.demo-banner {
+  margin: 0 48rpx 16rpx;
+  padding: 16rpx;
+  background-color: #FFF3CD;
+  border-radius: 8rpx;
+  text-align: center;
+}
+
+.demo-banner text {
+  font-size: 24rpx;
+  color: #856404;
+}

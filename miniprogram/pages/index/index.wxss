@@ -12,11 +12,9 @@ page {
   height: 100vh;
 }
 
-/* 顶部标题栏 */
 .header {
-  position: relative;
   width: 100%;
-  padding: 32rpx 0;
+  padding: 24rpx 0;
   background-color: #07C160;
   text-align: center;
   flex-shrink: 0;
@@ -29,11 +27,70 @@ page {
   letter-spacing: 2rpx;
 }
 
-/* 图片预览区域 */
-.preview-area { flex-shrink: 0; height: 140rpx; display: flex;
+.guide-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 16rpx 24rpx 0;
+  min-height: 0;
+}
+
+.guide-title {
+  font-size: 26rpx;
+  color: #999999;
+  margin-bottom: 12rpx;
+  display: block;
+  flex-shrink: 0;
+}
+
+.guide-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.guide-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 24rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.guide-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}
+
+.dot-recyclable { background-color: #07C160; }
+.dot-hazardous { background-color: #E74C3C; }
+.dot-kitchen { background-color: #F39C12; }
+.dot-other { background-color: #7F8C8D; }
+
+.guide-label {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 4rpx;
+}
+
+.guide-desc {
+  font-size: 22rpx;
+  color: #aaaaaa;
+}
+
+.preview-area {
+  flex-shrink: 0;
+  height: 100rpx;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 32rpx;
+  margin: 12rpx 24rpx;
   background-color: #ffffff;
   border-radius: 16rpx;
   border: 2rpx dashed #d0d0d0;
@@ -50,10 +107,9 @@ page {
   font-size: 28rpx;
 }
 
-/* 识别结果区域 */
 .result-area {
-  margin: 0 32rpx 24rpx;
-  padding: 24rpx;
+  margin: 0 24rpx 12rpx;
+  padding: 20rpx;
   background-color: #ffffff;
   border-radius: 12rpx;
   flex-shrink: 0;
@@ -65,12 +121,11 @@ page {
   text-align: center;
 }
 
-/* 底部按钮组 */
 .button-group {
   display: flex;
   flex-direction: row;
-  padding: 24rpx 32rpx;
-  padding-bottom: calc(124rpx + env(safe-area-inset-bottom));
+  padding: 12rpx 24rpx;
+  padding-bottom: calc(12rpx + 100rpx + env(safe-area-inset-bottom));
   gap: 24rpx;
   flex-shrink: 0;
 }
@@ -100,64 +155,4 @@ page {
   background-color: #ffffff;
   color: #07C160;
   border: 2rpx solid #07C160;
-}
-.header-link {
-  position: absolute;
-  right: 32rpx;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;
-  font-size: 28rpx;
-}
-/* 分类指南 */
-.guide-section { flex: 1; overflow: hidden;
-  margin: 0 32rpx 16rpx;
-  flex-shrink: 0;
-}
-
-.guide-title {
-  font-size: 26rpx;
-  color: #999999;
-  margin-bottom: 16rpx;
-  display: block;
-}
-
-.guide-grid { height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 12rpx;
-}
-
-.guide-item {
-  width: calc(50% - 6rpx); height: calc(50% - 6rpx); align-content: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 12rpx;
-  padding: 20rpx;
-  box-sizing: border-box;
-}
-
-.guide-dot {
-  width: 16rpx;
-  height: 16rpx;
-  border-radius: 50%;
-  margin-bottom: 10rpx;
-}
-
-.dot-recyclable { background-color: #07C160; }
-.dot-hazardous { background-color: #E74C3C; }
-.dot-kitchen { background-color: #F39C12; }
-.dot-other { background-color: #7F8C8D; }
-
-.guide-label {
-  font-size: 28rpx;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 6rpx;
-}
-
-.guide-desc { font-size: 26rpx;
-  color: #aaaaaa;
 }
