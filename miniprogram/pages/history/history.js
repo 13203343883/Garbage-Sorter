@@ -12,6 +12,20 @@ Page({
     this.setData({ historyList: history })
   },
 
+  onClearAll() {
+    var that = this
+    wx.showModal({
+      title: '提示',
+      content: '确定清空所有识别记录吗？',
+      success(res) {
+        if (res.confirm) {
+          wx.clearStorageSync()
+          that.setData({ historyList: [] })
+        }
+      }
+    })
+  },
+
   onItemTap(e) {
     var dataset = e.currentTarget.dataset
     var params = [

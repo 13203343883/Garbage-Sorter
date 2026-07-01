@@ -36,8 +36,7 @@ page {
 }
 
 .guide-title {
-  font-size: 26rpx;
-  color: #999999;
+  font-size: 38rpx; color: #555555;
   margin-bottom: 12rpx;
   display: block;
   flex-shrink: 0;
@@ -73,15 +72,13 @@ page {
 .dot-kitchen { background-color: #F39C12; }
 .dot-other { background-color: #7F8C8D; }
 
-.guide-label {
-  font-size: 28rpx;
+.guide-label { font-size: 36rpx;
   font-weight: 600;
   margin-bottom: 4rpx;
 }
 
 .guide-desc {
-  font-size: 22rpx;
-  color: #aaaaaa;
+  font-size: 28rpx; color: #999999;
 }
 
 .preview-area {

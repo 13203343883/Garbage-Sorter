@@ -4,34 +4,28 @@
     <text class="header-title">垃圾分类助手</text>
   </view>
 
-  <!-- 分类指南 -->
   <view wx:if="{{showGuide}}" class="guide-section">
     <text class="guide-title">垃圾分类指南</text>
     <view class="guide-grid">
       <view class="guide-item">
-        <view class="guide-dot dot-recyclable"></view>
         <text class="guide-label" style="color: #07C160;">可回收物</text>
-        <text class="guide-desc">纸类、塑料、金属、玻璃</text>
+        <text class="guide-desc">废玻璃、废金属、废塑料、废旧织物、废纸张、废书籍、废纸板箱、废弃电器电子产品</text>
       </view>
       <view class="guide-item">
-        <view class="guide-dot dot-hazardous"></view>
         <text class="guide-label" style="color: #E74C3C;">有害垃圾</text>
-        <text class="guide-desc">电池、灯管、药品、油漆</text>
+        <text class="guide-desc">电池、消毒液、杀虫剂、过期药品、温度计、含汞荧光灯、油漆</text>
       </view>
       <view class="guide-item">
-        <view class="guide-dot dot-kitchen"></view>
         <text class="guide-label" style="color: #F39C12;">厨余垃圾</text>
-        <text class="guide-desc">剩饭、果皮、茶叶、花卉</text>
+        <text class="guide-desc">剩菜剩饭、茶叶渣、动物内脏、调料、过期食品、鱼骨鱼刺、瓜果皮壳、菜帮菜叶</text>
       </view>
       <view class="guide-item">
-        <view class="guide-dot dot-other"></view>
         <text class="guide-label" style="color: #7F8C8D;">其他垃圾</text>
-        <text class="guide-desc">纸巾、尘土、一次性餐具</text>
+        <text class="guide-desc">卫生纸、饮料杯、食品袋、废胶带、污染纸张、污损塑料、外卖餐盒、陶瓷碎片</text>
       </view>
     </view>
   </view>
 
-  <!-- 图片预览区域 -->
   <view class="preview-area">
     <image wx:if="{{hasImage}}" class="preview-image" src="{{imagePath}}" mode="aspectFit"></image>
     <text wx:else class="preview-placeholder">请点击下方按钮选择图片</text>

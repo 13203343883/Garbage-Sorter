@@ -12,7 +12,7 @@ page {
   height: 100vh;
 }
 
-.header {
+.header { position: relative;
   width: 100%;
   padding: 24rpx 0;
   background-color: #07C160;
@@ -114,3 +114,4 @@ page {
   color: #aaaaaa;
   flex-shrink: 0;
 }
+.clear-btn { position: absolute; right: 24rpx; top: 50%; transform: translateY(-50%); color: #ffffff; font-size: 26rpx; }
