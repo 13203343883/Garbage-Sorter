@@ -36,7 +36,8 @@ page {
 }
 
 .guide-title {
-  font-size: 38rpx; color: #555555;
+  font-size: 38rpx;
+  color: #555555;
   margin-bottom: 12rpx;
   display: block;
   flex-shrink: 0;
@@ -60,25 +61,15 @@ page {
   box-sizing: border-box;
 }
 
-.guide-dot {
-  width: 16rpx;
-  height: 16rpx;
-  border-radius: 50%;
-  margin-bottom: 10rpx;
-}
-
-.dot-recyclable { background-color: #07C160; }
-.dot-hazardous { background-color: #E74C3C; }
-.dot-kitchen { background-color: #F39C12; }
-.dot-other { background-color: #7F8C8D; }
-
-.guide-label { font-size: 36rpx;
+.guide-label {
+  font-size: 36rpx;
   font-weight: 600;
   margin-bottom: 4rpx;
 }
 
 .guide-desc {
-  font-size: 28rpx; color: #999999;
+  font-size: 28rpx;
+  color: #999999;
 }
 
 .preview-area {

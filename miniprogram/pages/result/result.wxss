@@ -36,7 +36,7 @@ page {
 
 .result-image {
   width: 80%;
-  max-height: 600rpx;
+  
   border-radius: 16rpx;
   box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
@@ -108,7 +108,7 @@ page {
 }
 
 .image-empty {
-  height: 400rpx;
+  
   background-color: #ffffff;
   display: flex;
   align-items: center;

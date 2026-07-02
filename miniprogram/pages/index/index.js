@@ -27,8 +27,9 @@ function goResult(that, tempFilePath, d, isReal) {
     categoryClass: getCategoryClass(d.category),
     categoryName: d.category || '其他垃圾',
     time: formatTime(new Date()),
-    imagePath: tempFilePath, isReal: !!isReal,
-    confidence: d.confidence != null ? d.confidence : ''
+    imagePath: tempFilePath,
+    confidence: d.confidence != null ? d.confidence : '',
+    isReal: !!isReal
   }
   var history = wx.getStorageSync('history') || []
   history.unshift(record)
@@ -44,7 +45,14 @@ function goResult(that, tempFilePath, d, isReal) {
   wx.navigateTo({ url: '/pages/result/result?' + params.join('&') })
 }
 
-Page({ onShow() { console.log('index onShow reset'); this.setData({ hasImage: false, imagePath: '', result: '', showGuide: true }); if (typeof this.getTabBar === 'function' && this.getTabBar()) { this.getTabBar().setData({ selected: 0 }) } },
+Page({
+  onShow() {
+    this.setData({ hasImage: false, imagePath: '', result: '', showGuide: true })
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({ selected: 0 })
+    }
+  },
+
   data: { hasImage: false, imagePath: '', result: '', showGuide: true },
 
   uploadAndNavigate(tempFilePath) {
@@ -63,19 +71,19 @@ Page({ onShow() { console.log('index onShow reset'); this.setData({ hasImage: fa
             goResult(that, tempFilePath, result.data, true)
           } else {
             var demo = demoPool[Math.floor(Math.random() * demoPool.length)]
-            wx.showToast({ title: '⚠ 演示模式（随机结果）', icon: 'none', duration: 1500 })
+            wx.showToast({ title: '演示模式（随机结果）', icon: 'none', duration: 1500 })
             setTimeout(function() { goResult(that, tempFilePath, demo, false) }, 1500)
           }
         } catch (e) {
           var demo = demoPool[Math.floor(Math.random() * demoPool.length)]
-          wx.showToast({ title: '⚠ 演示模式（随机结果）', icon: 'none', duration: 1500 })
+          wx.showToast({ title: '演示模式（随机结果）', icon: 'none', duration: 1500 })
           setTimeout(function() { goResult(that, tempFilePath, demo, false) }, 1500)
         }
       },
       fail() {
         wx.hideLoading()
         var demo = demoPool[Math.floor(Math.random() * demoPool.length)]
-        wx.showToast({ title: '⚠ 演示模式（随机结果）', icon: 'none', duration: 1500 })
+        wx.showToast({ title: '演示模式（随机结果）', icon: 'none', duration: 1500 })
         setTimeout(function() { goResult(that, tempFilePath, demo, false) }, 1500)
       }
     })
