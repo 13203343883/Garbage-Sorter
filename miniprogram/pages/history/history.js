@@ -26,6 +26,23 @@ Page({
     })
   },
 
+  onItemLongPress(e) {
+    var that = this
+    var id = e.currentTarget.dataset.id
+    wx.showModal({
+      title: '删除记录',
+      content: '确定删除这条识别记录吗？',
+      success(res) {
+        if (res.confirm) {
+          var history = wx.getStorageSync('history') || []
+          history = history.filter(function(item) { return item.id !== id })
+          wx.setStorageSync('history', history)
+          that.setData({ historyList: history })
+        }
+      }
+    })
+  },
+
   onItemTap(e) {
     var dataset = e.currentTarget.dataset
     var params = [
@@ -34,6 +51,7 @@ Page({
       'category=' + encodeURIComponent(dataset.category || ''),
       'confidence=' + encodeURIComponent(dataset.confidence || '')
     ].join('&')
+    if (dataset.isReal) params += '&isReal=1'
     wx.navigateTo({ url: '/pages/result/result?' + params })
   }
 })

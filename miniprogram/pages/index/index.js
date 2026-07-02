@@ -27,7 +27,7 @@ function goResult(that, tempFilePath, d, isReal) {
     categoryClass: getCategoryClass(d.category),
     categoryName: d.category || '其他垃圾',
     time: formatTime(new Date()),
-    imagePath: tempFilePath,
+    imagePath: tempFilePath, isReal: !!isReal,
     confidence: d.confidence != null ? d.confidence : ''
   }
   var history = wx.getStorageSync('history') || []

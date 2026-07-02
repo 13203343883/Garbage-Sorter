@@ -5,7 +5,7 @@ function getCategoryClass(c) {
 }
 
 Page({
-  data: { imagePath: '', garbageName: '', garbageCategory: '', confidence: '', categoryClass: '', isReal: true },
+  data: { imagePath: '', garbageName: '', garbageCategory: '', confidence: '', categoryClass: '', isReal: true, lowConfidence: false, confidenceLevel: '' },
 
   onLoad(options) {
     var imagePath = options.imagePath || ''
@@ -28,7 +28,7 @@ Page({
       garbageCategory: garbageCategory || '—',
       confidence: confidence || '',
       categoryClass: getCategoryClass(garbageCategory),
-      isReal: isReal
+      isReal: isReal, lowConfidence: (parseFloat(confidence) > 0 && parseFloat(confidence) < 90), confidenceLevel: (parseFloat(confidence) >= 90 ? 'high' : parseFloat(confidence) >= 60 ? 'mid' : confidence ? 'low' : '')
     })
   },
 

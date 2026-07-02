@@ -137,3 +137,18 @@ page {
   font-size: 24rpx;
   color: #856404;
 }
+.low-conf-banner {
+  margin: 0 48rpx 16rpx;
+  padding: 16rpx;
+  background-color: #FFF3E0;
+  border-radius: 8rpx;
+  text-align: center;
+}
+
+.low-conf-banner text {
+  font-size: 24rpx;
+  color: #E65100;
+}
+.conf-high { color: #07C160; font-weight: 600; }
+.conf-mid { color: #F39C12; font-weight: 600; }
+.conf-low { color: #E74C3C; font-weight: 600; }

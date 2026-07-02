@@ -11,7 +11,9 @@
     <text class="empty-hint">暂无图片</text>
   </view>
 
-  <view class="demo-banner" wx:if="{{!isReal}}"><text>⚠ 演示数据，非真实识别结果</text></view><view class="info-card">
+  <view class="demo-banner" wx:if="{{!isReal}}"><text>⚠ 演示数据，非真实识别结果</text></view>
+  <view class="low-conf-banner" wx:if="{{lowConfidence}}"><text>⚠ 识别置信度较低，结果可能不准确</text></view>
+  <view class="info-card">
     <view class="info-row">
       <text class="info-label">垃圾名称</text>
       <text class="info-value">{{garbageName || '—'}}</text>
@@ -22,7 +24,7 @@
     </view>
     <view class="info-row">
       <text class="info-label">置信度</text>
-      <text class="info-value">{{confidence ? confidence + '%' : '—'}}</text>
+      <text class="info-value conf-{{confidenceLevel}}">{{confidence ? confidence + '%' : '—'}}</text>
     </view>
   </view>
 

@@ -20,8 +20,8 @@
       data-image-path="{{item.imagePath}}"
       data-name="{{item.garbageName}}"
       data-category="{{item.category}}"
-      data-confidence="{{item.confidence}}"
-      bindtap="onItemTap"
+      data-confidence="{\{item\.confidence\}\}" data-is-real="{\{item\.isReal\}\}"
+      bindtap="onItemTap" bindlongpress="onItemLongPress"
     >
       <text class="item-name">{{item.garbageName}}</text>
       <text class="item-category category-{{item.categoryClass}}">{{item.categoryName || item.category}}</text>
